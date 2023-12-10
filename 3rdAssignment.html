@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natural Numbers Operations</title>
+    <style>
+        body {
+            font-family: 'Quicksand', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: linear-gradient(to right, #ffd3e0, #ffb6c1);
+            color: #fff;
+            min-height: 100vh;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #363062;
+        }
+
+        button {
+            background-color: #8d6a9f;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s, transform 0.5s;
+        }
+
+        button:hover {
+            background-color: #27ae60;
+            transform: translateY(-5px);
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: linear-gradient(to right, #ffd3e0, #ffb6c1);
+            color: #fff;
+            min-height: 100vh;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #363062;
+        }
+
+        .button {
+            background-color: #8d6a9f;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s, transform 0.5s;
+        }
+
+        /* Button hover styles */
+        .button:hover {
+            background-color: #27ae60;
+            transform: translateY(-5px);
+        }
+
+        .modal {
+            color: #363062;
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+            padding-top: 60px;
+        }
+
+        .modal-content {
+            background-color: #FED9ED;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .modal {
+            color: #363062;
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+            padding-top: 60px;
+        }
+
+        .modal-content {
+            background-color: #FED9ED;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Natural Numbers Operations</h1>
+
+    <button class="button" onclick="openModal()">Perform Operations</button>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h3>Natural Numbers Operations</h3>
+            <label for="inputNumber">Enter N:</label>
+            <input type="number" id="inputNumber">
+            <button onclick="calculateOperations()">Calculate</button>
+            <button onclick="openClearModal()">Clear</button>
+            <div id="result"></div>
+        </div>
+    </div>
+
+    <!-- Clear Confirmation Modal -->
+    <div id="clearModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeClearModal()">&times;</span>
+            <h3>Clear Inputs</h3>
+            <p>Are you sure you want to clear the inputs?</p>
+            <button onclick="clearInputs()">OK</button>
+            <button onclick="closeClearModal()">Cancel</button>
+        </div>
+    </div>
+     <a href="HOMEPAGE.html"><button>Back to Home Page</button></a>
+    <script>
+        function openModal() {
+            document.getElementById('myModal').style.display = 'block';
+
+            // Adding 'active' class to trigger the animation
+            document.querySelector('.button').classList.add('active');
+        }
+
+        function closeModal() {
+            document.getElementById('myModal').style.display = 'none';
+
+            // Removing 'active' class to reset the animation
+            document.querySelector('.button').classList.remove('active');
+        }
+
+        function openClearModal() {
+            document.getElementById('clearModal').style.display = 'block';
+        }
+
+        function closeClearModal() {
+            document.getElementById('clearModal').style.display = 'none';
+        }
+
+        function calculateOperations() {
+            var n = parseInt(document.getElementById('inputNumber').value);
+
+            // Display natural numbers one by one
+            var naturalNumbers = "Natural Numbers: ";
+            for (var i = 1; i <= n; i++) {
+                naturalNumbers += i + " ";
+            }
+
+            // Calculate Factorial using While Loop
+            var factorial = 1;
+            var j = 1;
+            while (j <= n) {
+                factorial *= j;
+                j++;
+            }
+
+            // Calculate Sum using Do-While Loop
+            var sum = 0;
+            var k = 1;
+            do {
+                sum += k;
+                k++;
+            } while (k <= n);
+
+            // Calculate Average using For Loop
+            var total = 0;
+            for (var l = 1; l <= n; l++) {
+                total += l;
+            }
+            var average = total / n;
+
+            // Display results
+            var resultElement = document.getElementById('result');
+            resultElement.innerHTML = `
+                <p>${naturalNumbers}</p>
+                <p>Factorial of ${n}: ${factorial}</p>
+                <p>Sum of first ${n} natural numbers: ${sum}</p>
+                <p>Average of first ${n} natural numbers: ${average.toFixed(2)}</p>
+            `;
+
+            // Close the Clear Confirmation Modal if open
+            closeClearModal();
+        }
+
+        function clearInputs() {
+            document.getElementById('inputNumber').value = '';
+            document.getElementById('result').innerHTML = '';
+
+            // Close the Clear Confirmation Modal if open
+            closeClearModal();
+        }
+    </script>
+
+</body>
+</html>
