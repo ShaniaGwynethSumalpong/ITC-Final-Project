@@ -36,12 +36,48 @@
             animation: slideIn 1s ease-in-out forwards;
         }
 
-        .section {
+        .sectionfirst {
             opacity: 0;
             border: 2px solid #fff;
-            padding: 20px;
+            padding: 30px;
             border-radius: 10px;
-            max-width: 200px; /* Adjusted max-width for a more compact design */
+            max-width: 220px; /* Adjusted max-width for a more compact design */
+            margin: 20px; /* Added margin for space between sections */
+            animation: fadeIn 1s ease-in-out forwards;
+            background: #31304D;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Added box shadow for a shadow effect */
+            display: none;
+        }
+        .sectionsecond {
+            opacity: 0;
+            border: 2px solid #fff;
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 220px; /* Adjusted max-width for a more compact design */
+            margin: 20px; /* Added margin for space between sections */
+            animation: fadeIn 1s ease-in-out forwards;
+            background: #31304D;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Added box shadow for a shadow effect */
+            display: none;
+        }
+        .sectionthird {
+            opacity: 0;
+            border: 2px solid #fff;
+            padding: 35px;
+            border-radius: 10px;
+            max-width: 180px; /* Adjusted max-width for a more compact design */
+            margin: 20px; /* Added margin for space between sections */
+            animation: fadeIn 1s ease-in-out forwards;
+            background: #31304D;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Added box shadow for a shadow effect */
+            display: none;
+        }
+        .sectionfourth {
+            opacity: 0;
+            border: 2px solid #fff;
+            padding: 35px;
+            border-radius: 10px;
+            max-width: 190px; /* Adjusted max-width for a more compact design */
             margin: 20px; /* Added margin for space between sections */
             animation: fadeIn 1s ease-in-out forwards;
             background: #31304D;
@@ -115,28 +151,28 @@
         <div id="content">
             <button id="startButton" class="button" onclick="showContent()">Start Exploring</button>
 
-            <div id="section1" class="section">
+            <div id="section1" class="sectionfirst">
                 <h2>'Conversion'</h2>
                 <p>This assignment involves creating a conversion calculator with HTML and JavaScript. Users can input values in Celsius and Fahrenheit to convert between the two temperature scales. Additionally, the calculator provides the functionality to convert lengths between meters and feet, as well as feet to meters.</p>
-                <a href="1stAssignment.html" class="button">Continue</a>
+                <a href="1stassignment.html" class="button">Continue</a>
             </div>
 
-            <div id="section2" class="section">
+            <div id="section2" class="sectionsecond">
                 <h2>'Income Tax Calculator'</h2>
                 <p>In this assignment, you will build an Income Tax Calculator using HTML and JavaScript. Users can input their annual income, and the calculator will determine the income tax owed based on predefined tax brackets and rates. The goal is to create a simple tool for individuals to estimate their income tax liability.</p>
-                <a href="2ndAssignment.html" class="button">Continue</a>
+                <a href="2ndassignment.html" class="button">Continue</a>
             </div>
 
-            <div id="section3" class="section">
+            <div id="section3" class="sectionthird">
                 <h2>'Looping'</h2>
                 <p>This assignment focuses on implementing basic loop structures in JavaScript. The program calculates the factorial of a number using a while loop, the sum of first N natural numbers using a do-while loop, and the average of first N natural numbers using a for loop.</p>
-                <a href="3rdAssignment.html" class="button">Continue</a>
+                <a href="3rdassignment.html" class="button">Continue</a>
             </div>
 
-            <div id="section4" class="section">
+            <div id="section4" class="sectionfourth">
                 <h2>'Simple Payroll'</h2>
                 <p>The Simple Payroll assignment involves creating a payroll calculator with HTML and JavaScript. Users input the hours worked and hourly rate, and the calculator computes the total pay. The assignment also includes a feature to clear the output and a modal for user interaction.</p>
-                <a href="4thAssignment.html" class="button">Continue</a>
+                <a href="4thassignment.html" class="button">Continue</a>
             </div>
         </div>
     </div>
